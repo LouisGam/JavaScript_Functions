@@ -7,17 +7,24 @@ console.log("EXERCISE 1:\n==========\n");
 console.log("EXERCISE 2:\n==========\n");
  //Exercise 1
 
- function printOdds(count); {
-    for (i=0;i<=10;i++){
-        printOdds(function(count){
-            $(".test").html(i);
-        },10000);
-        console.log (printOdds);
+ function printOdds(count) {
+    if (count < 0) {
+        for (i = count; i <= 0; i++){
+            if (Math.abs(i % 2) == 1){
+                console.log(i);
+            }
+        }
+    }
+    for (i = 0;i <= count; i++) {
+        if (i % 2 === 1) {
+            console.log(i);
+        }  
       }
-      ​
  }
-
-
+    console.log("print positive odds")
+    printOdds(120);
+    console.log("print negative odds")
+    printOdds(-25);
  //Exercise 2 Section
 
  function checkAge( userName, age) {
